@@ -1,0 +1,88 @@
+\documentclass[12pt,a4paper]{article}
+% The following LaTeX packages must be installed on your machine: amsmath, authblk, bm, booktabs, caption, dcolumn, fancyhdr, geometry, graphicx, hyperref, latexsym, natbib
+\input{185.dat}
+\usepackage{gensymb}
+\usepackage{amsthm}
+\usepackage{float}
+\usepackage{siunitx}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{enumerate}
+\usepackage{listings}
+\usepackage{mathtools}
+\PassOptionsToPackage{hyphens}{url}\usepackage{hyperref}
+\usepackage[none]{hyphenat}
+\usepackage{physics}
+\newcommand\ddfrac[2]{\frac{\displaystyle #1}{\displaystyle #2}}
+%\renewcommand{\familydefault}{\sfdefault}
+
+
+\begin{document}
+
+\begin{titlepage}
+\begin{center}
+\vspace*{\fill}
+
+\Huge{ IP Proposal \\
+29 April 2019
+} \\
+
+\qquad
+\qquad
+
+\normalsize{Kenneth V. Domingo \\
+Rhei Joven G. Juan \\
+Rene L. Principe Jr. \\ \bigskip
+App Physics 185 (A.Y. 2018-19)
+}
+
+\vspace*{\fill}
+\end{center}
+\end{titlepage}
+
+\setcounter{page}{1}
+
+\section{Objectives}
+\begin{itemize}
+	\item To be able to detect the force exerted by various locations on a person's foot.
+	\item To be able to characterize, based on the force vs time graph, whether a person is standing, walking, running, or jumping.
+	\item To be able to characterize the sport being played based on the force vs time graph.
+\end{itemize}
+
+\section{Materials \& Methodology}
+
+\begin{table}[h!]
+	\centering
+	\caption{Estimated cost of materials.}
+	\begin{tabular}{cccc}
+	Quantity & Item & Cost/pc (PhP) & Subtotal (PhP) \\ \hline
+	1 & Pressure-sensitive conductive velostat sheet & 349.00 & 349.00 \\
+	1 & ESP8266 WiFi Microcontroller & 325.00 & 325.00 \\
+	2 & 9V Battery & 79.00 & 158.00 \\
+	& & \textbf{TOTAL} & 832.00
+	\end{tabular}
+\end{table}
+
+\begin{enumerate}
+	\item Pieces of the velostat sheet are attached to 3 locations on the insole of a shoe. 
+	\item The velostat is attached to the microcontroller for real-time data acquisition.
+	\item Voltage vs. force calibration was done by applying different values of force to the velostat sheet.
+	\item A force vs. time is plotted in real-time for different motions.
+	\item A characterization of the different motions was done using the frequencies and magnitudes obtained from the force vs. time plot.
+\end{enumerate}
+
+\section{Predicted Results}
+Characterization of different motions:
+\begin{itemize}
+	\item \textbf{Standing} - constant force observed over time
+	\item \textbf{Walking} - a cascading motion from the three sensors will be observed
+	\item \textbf{Running} - same as walking but with higher frequency
+	\item \textbf{Jumping} - two sets of impulse will be observed from the take-off and landing.
+\end{itemize}
+\section{Validation Scheme}
+\begin{itemize}
+	\item Compare the obtained force value from the sensor with the calculated calibration equation/curve, for standing motion.
+	\item Through real-time analysis, compare a video of the motions to their force vs. time plot.
+\end{itemize}
+
+\end{document}
