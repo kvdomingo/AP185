@@ -41,6 +41,7 @@ bool isReqCame = false;
 
 void CheckNewReq(){
   client = server.available();
+  client.setNoDelay(1);
   if (!client) {
     return;
   }
@@ -96,9 +97,9 @@ String getPath(){
 float Vin = 0;
 
 void setup(){
-  Serial.begin(9600);
+  Serial.begin(921600);
   pinMode(A0, INPUT);
-  start("IPL_VIP","bahaghari");  // Wifi details connect to
+  start("DILNET-WiFi","16431879199842");  // Wifi details connect to
 }
 
 void loop(){
