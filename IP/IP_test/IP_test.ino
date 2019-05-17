@@ -1,13 +1,14 @@
-int Vin = 0;
-float Vs = 0;
+float Vin = 0;
 
 void setup() {
   Serial.begin(9600);
-  pinMode(A0, OUTPUT);
+  pinMode(A0, INPUT);
 }
- 
+
 void loop() {
   Vin = analogRead(A0);
-  Vs = Vin/1024. * 3.3;
-  Serial.println(Vin);
+  Serial.print(millis());
+  Serial.print(",");
+  Serial.print(Vin);
+  Serial.println();
 }
